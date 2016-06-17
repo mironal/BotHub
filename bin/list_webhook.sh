@@ -3,7 +3,7 @@
 # GitHub の WebHook の一覧を取得
 
 # 以下の環境変数が必要
-# BOTHUB_GITHUB_TOKEN: GitHub の Token(要管理者権限).
+# BOTHUB_GITHUB_TOKEN: GitHub の Token(要 admin repo hook).
 # BOTHUB_USER_NAME: https://github.com/UserName/RepoName の UserName の部分
 # BOTHUB_REPO_NAME: https://github.com/UserName/RepoName の RepoName の部分
 
