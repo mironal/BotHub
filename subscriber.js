@@ -1,8 +1,11 @@
 "use strict"
 
-class Subscriber {
+const EventEmitter = require("events").EventEmitter
+
+class Subscriber extends EventEmitter {
 
   constructor() {
+    super()
     this.actions = []
   }
 

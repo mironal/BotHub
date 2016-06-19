@@ -5,6 +5,19 @@ const assert = require("chai").assert
 
 describe("Subscriber", () => {
 
+  it("emit event", (done) => {
+
+    let subscriber = new Subscriber()
+
+    subscriber.on("test", () => {
+      process.nextTick(() => {
+        done()
+      })
+    })
+
+    subscriber.emit("test")
+  })
+
   it("add", () => {
 
     let subscriber = new Subscriber()

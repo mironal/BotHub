@@ -6,6 +6,18 @@ const assert = require("chai").assert
 
 describe("BotHub", () => {
 
+  it("emit event", (done) => {
+
+    let bothub = new BotHub()
+
+    bothub.on("hoge", e => {
+      process.nextTick(() => {
+        done()
+      })
+    })
+    bothub.emit("hoge")
+  })
+
   it("subscribe", () => {
 
     let bothub = new BotHub()

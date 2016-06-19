@@ -1,11 +1,12 @@
 "use strict"
 
+const EventEmitter = require("events").EventEmitter
 const Subscriber = require("./subscriber")
 
-
-class BotHub {
+class BotHub extends EventEmitter {
 
   constructor() {
+    super()
     this.subscribers = new Map()
   }
 
