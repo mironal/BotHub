@@ -25,6 +25,10 @@ class Subscriber extends EventEmitter {
     this.__add("pull_request_review_comment", action)
   }
 
+  pull_request_review(action) {
+    this.__add("pull_request_review", action)
+  }
+
   push(action) {
     this.__add("push", action)
   }
